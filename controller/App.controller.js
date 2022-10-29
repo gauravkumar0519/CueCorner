@@ -26,6 +26,12 @@ sap.ui.define([
             nsec = d.getSeconds();
             var AmOrPm = nhour >= 12 ? 'PM' : 'AM';
             nhour = (nhour % 12) || 12;
+            if(nmin < 10){
+                nmin = "0" + nmin;
+            }
+            if(nsec < 10){
+                nsec = "0" + nsec;
+            }
             data.startTime = nhour + ":" + nmin + ":" + nsec + " " + AmOrPm;
             data.startTime1 = d.getTime();
             data.endTime = "";
