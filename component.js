@@ -12,7 +12,7 @@ sap.ui.define([
 		init : function () {
 			// call the init function of the parent
 			UIComponent.prototype.init.apply(this, arguments);
-			
+			// bring the heat
 			 // set data model
 	         var oData = {
 	            tables: [
