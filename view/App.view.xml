@@ -1,0 +1,58 @@
+<mvc:View controllerName="cueCorner.controller.App" xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true">
+	<Shell>
+	<App>
+		<pages>
+			<Page title="{i18n>homePageTitle}">				
+					<Table items="{
+							path: '/tables',
+							sorter: {
+								path: 'Name'
+							}
+						}">
+						<columns>
+							<Column>
+								<Text text="Number" />
+							</Column>
+							<Column>
+								<Text text="Type" />
+							</Column>
+							<Column>
+								<Text text="Start Time" />
+							</Column>
+							<Column>
+								<Text text="End Time" />
+							</Column>
+							<Column>
+								<Text text="Duration" />
+							</Column>
+							<Column>
+								<Text text="Amount" />
+							</Column>
+							<Column>
+								<Text text="" />
+							</Column>
+						</columns>
+						<items>					
+							<ColumnListItem vAlign="Middle">
+								<cells>
+									<Text text="{id}" />
+									<Text text="{label}" />
+									<Text text="{startTime}" />
+									<Text text="{endTime}" />
+									<Text text="{duration}" />
+									<Text text="{amount}" />
+									<HBox>
+										<Button text="Start" press=".onTimeStart" visible="{= (!${isStarted})}"/>
+										<Button text="End" press=".onTimeEnd" visible="{isStarted}"/>
+									</HBox>
+								</cells>
+							</ColumnListItem>
+						</items>			
+				</Table>
+			</Page>
+		</pages>
+	</App>
+	</Shell>
+</mvc:View>
