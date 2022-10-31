@@ -34,6 +34,8 @@ sap.ui.define([
             }
             data.startTime = nhour + ":" + nmin + ":" + nsec + " " + AmOrPm;
             data.startTime1 = d.getTime();
+            data.duration = 0;
+            data.amount = 0;
             data.endTime = "";
             data.isStarted = true;
             oModel.setProperty(sPath, data);                    
